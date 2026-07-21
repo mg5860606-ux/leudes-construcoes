@@ -18,23 +18,31 @@
     <meta name="geo.position" content="-23.2646;-47.2992">
     <meta name="ICBM" content="-23.2646, -47.2992">
 
-    <!-- ===== OPEN GRAPH (Facebook / WhatsApp) ===== -->
+    <!-- ===== OPEN GRAPH (WhatsApp / Facebook / Instagram / LinkedIn) ===== -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://leudes-construcoes.com.br/">
     <meta property="og:title" content="Leudes Construções - Empreiteiro Profissional em Itu/SP">
     <meta property="og:description" content="Mais de 27 anos de experiência em construção civil em Itu e região. Construções residenciais, comerciais, reformas completas e acabamentos de qualidade. Orçamento grátis!">
-    <meta property="og:image" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.webp">
-    <meta property="og:image:alt" content="Leudes - Empreiteiro Profissional em Itu SP">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.jpg">
+    <meta property="og:image:secure_url" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1825">
+    <meta property="og:image:height" content="862">
+    <meta property="og:image:alt" content="Leudes - Empreiteiro Profissional em Itu SP com 27 anos de experiência">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:site_name" content="Leudes Construções">
 
-    <!-- ===== TWITTER CARD ===== -->
+    <!-- ===== TWITTER / X CARD ===== -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Leudes Construções - Empreiteiro em Itu/SP">
     <meta name="twitter:description" content="Construções residenciais, reformas e acabamentos em Itu/SP. +27 anos de experiência. Orçamento grátis!">
-    <meta name="twitter:image" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.webp">
+    <meta name="twitter:image" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.jpg">
+    <meta name="twitter:image:alt" content="Leudes Construções - Empreiteiro em Itu/SP">
+
+    <!-- ===== LINKEDIN / WHATSAPP / TELEGRAM ===== -->
+    <meta itemprop="name" content="Leudes Construções - Empreiteiro Profissional em Itu/SP">
+    <meta itemprop="description" content="Mais de 27 anos de experiência. Construção, reforma e acabamento em Itu/SP. Orçamento grátis!">
+    <meta itemprop="image" content="https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.jpg">
 
     <!-- ===== SCHEMA.ORG JSON-LD (STRUCTURED DATA) ===== -->
     <script type="application/ld+json">
@@ -856,45 +864,12 @@
             box-shadow: 0 8px 25px rgba(232, 130, 12, 0.45);
         }
 
-        .social-proof-toast {
-            position: fixed;
-            bottom: 75px;
-            left: 20px;
-            background: var(--white);
-            border-left: 4px solid var(--green-whatsapp);
-            padding: 10px 16px;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            z-index: 997;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease, transform 0.4s ease;
-            pointer-events: none;
-        }
-
-        .social-proof-toast.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .toast-icon { font-size: 22px; }
-        .toast-text strong { display: block; font-size: 13px; color: var(--blue-dark); font-family: 'Montserrat', sans-serif; }
-        .toast-text span { font-size: 11px; color: #718096; }
-
         @media (max-width: 768px) {
             .share-float {
                 bottom: 75px;
                 left: 16px;
                 padding: 9px 15px;
                 font-size: 12px;
-            }
-            .social-proof-toast {
-                bottom: 125px;
-                left: 16px;
-                right: 16px;
             }
         }
 
@@ -1320,6 +1295,11 @@
                             WhatsApp
                         </a>
                     </li>
+                    <li>
+                        <a href="https://api.whatsapp.com/send?text=Olha%20o%20trabalho%20da%20Leudes%20Constru%C3%A7%C3%B5es%20-%20Empreiteiro%20em%20Itu/SP!%20%2B27%20anos%20de%20experi%C3%AAncia:%20https://leudes-construcoes.com.br/" target="_blank" class="btn-recomendar-nav">
+                            📢 Recomendar
+                        </a>
+                    </li>
                 </ul>
             </nav>
 
@@ -1698,14 +1678,7 @@
         📢 <span>Recomendar no WhatsApp</span>
     </a>
 
-    <!-- TOAST DE PROVA SOCIAL DINÂMICO (RANKING & CONVERSÃO) -->
-    <div class="social-proof-toast" id="socialProofToast">
-        <span class="toast-icon">📍</span>
-        <div class="toast-text">
-            <strong id="toastTitle">Novo Orçamento Solicitado</strong>
-            <span id="toastDesc">Cliente em Itu/SP há 10 minutos</span>
-        </div>
-    </div>
+
 
     <script>
         // Menu Mobile
@@ -1872,37 +1845,6 @@
                 if (e.key === 'ArrowRight') navFoto(1);
             }
         });
-
-        // ===== SOCIAL PROOF / PROVA SOCIAL DINÂMICA =====
-        const socialProofs = [
-            { icon: "📍", title: "Novo orçamento em Itu/SP", desc: "Cliente solicitou cotação para reforma residencial" },
-            { icon: "⭐", title: "5.0 Estrelas de Avaliação", desc: "+48 clientes satisfeitos em Itu e região" },
-            { icon: "🧱", title: "Obra Entregue em Itu", desc: "Sobrado moderno concluído com excelência" },
-            { icon: "🔨", title: "Atendimento Itu & Sorocaba", desc: "Fundações, alvenaria e acabamentos com garantia" }
-        ];
-
-        let proofIdx = 0;
-        function mostrarProvaSocial() {
-            const toast = document.getElementById('socialProofToast');
-            const title = document.getElementById('toastTitle');
-            const desc = document.getElementById('toastDesc');
-            const icon = toast ? toast.querySelector('.toast-icon') : null;
-            if (!toast || !title || !desc) return;
-
-            if (icon) icon.textContent = socialProofs[proofIdx].icon;
-            title.textContent = socialProofs[proofIdx].title;
-            desc.textContent = socialProofs[proofIdx].desc;
-            toast.classList.add('show');
-
-            setTimeout(() => {
-                toast.classList.remove('show');
-            }, 4500);
-
-            proofIdx = (proofIdx + 1) % socialProofs.length;
-        }
-
-        setInterval(mostrarProvaSocial, 10000);
-        setTimeout(mostrarProvaSocial, 3000);
 
         // Inicialização
         document.addEventListener('DOMContentLoaded', () => {
