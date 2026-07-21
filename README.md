@@ -4,13 +4,25 @@
 
   ### *Da Fundação ao Acabamento, Seu Sonho Construído com Excelência*
 
+  [![Site Online](https://img.shields.io/badge/Site-Online-2ea44f?style=for-the-badge&logo=github&logoColor=white)](https://mg5860606-ux.github.io/leudes-construcoes/)
   [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
   [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
   [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
   [![Responsive](https://img.shields.io/badge/Design-Responsivo-success?style=for-the-badge&logo=responsive&logoColor=white)](#-funcionalidades)
-  [![Status](https://img.shields.io/badge/Status-Conclu%C3%ADdo-brightgreen?style=for-the-badge)](#)
+
+  <br />
+
+  👉 **[Acesse a Landing Page Online](https://mg5860606-ux.github.io/leudes-construcoes/)** 👈
 
 </div>
+
+---
+
+## 🌐 Hospedagem & Demonstração Online
+
+O site está publicado e pode ser acessado diretamente através do **GitHub Pages**:
+
+🔗 **URL Oficial:** [https://mg5860606-ux.github.io/leudes-construcoes/](https://mg5860606-ux.github.io/leudes-construcoes/)
 
 ---
 
@@ -56,7 +68,7 @@ leudes-construcoes/
 
 ---
 
-## 💻 Como Executar o Projeto
+## 💻 Como Executar o Projeto Localmente
 
 Como o projeto utiliza tecnologias Web nativas (HTML, CSS e JavaScript), não é necessária a instalação de dependências ou build servers.
 
@@ -82,8 +94,9 @@ Como o projeto utiliza tecnologias Web nativas (HTML, CSS e JavaScript), não é
 
 Caso precise de serviços de construção civil ou reformas:
 
+[![Acesse o Site](https://img.shields.io/badge/Acessar-Site_Online-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mg5860606-ux.github.io/leudes-construcoes/)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5500000000000)
-[![Website](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mg5860606-ux/leudes-construcoes)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mg5860606-ux/leudes-construcoes)
 
 *Leudes Construções — Construindo o futuro, tijolo por tijolo.*
 
