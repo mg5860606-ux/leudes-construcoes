@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://leudes-construcoes.com.br/</loc>
+    <lastmod>2025-07-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://leudes-construcoes.com.br/fotos/leudes-empreiteiro-foto-uniforme.webp</image:loc>
+      <image:title>Leudes Empreiteiro e Pedreiro Profissional em Itu SP</image:title>
+      <image:caption>Leudes Construções com mais de 27 anos de experiência em Itu e região</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://leudes-construcoes.com.br/fotos/construcao-sobrado-moderno-vila-nova.webp</image:loc>
+      <image:title>Sobrado Moderno Construído por Leudes Construções</image:title>
+      <image:caption>Construção de sobrado residencial em Itu SP</image:caption>
+    </image:image>
+  </url>
+</urlset>

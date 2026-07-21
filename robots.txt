@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Allow: /fotos/
+Disallow: /private/
+
+# Sitemaps
+Sitemap: https://leudes-construcoes.com.br/sitemap.xml
