@@ -95,7 +95,8 @@ Como o projeto utiliza tecnologias Web nativas (HTML, CSS e JavaScript), não é
 Caso precise de serviços de construção civil ou reformas:
 
 [![Acesse o Site](https://img.shields.io/badge/Acessar-Site_Online-2ea44f?style=for-the-badge&logo=googlechrome&logoColor=white)](https://mg5860606-ux.github.io/leudes-construcoes/)
-[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5500000000000)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5511945639541)
+[![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white)](https://www.facebook.com/leudes.leu.5)
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/mg5860606-ux/leudes-construcoes)
 
 *Leudes Construções — Construindo o futuro, tijolo por tijolo.*
