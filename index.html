@@ -915,23 +915,53 @@
         .lightbox-prev { left: 16px; }
         .lightbox-next { right: 16px; }
 
+        .galeria-controls {
+            text-align: center;
+            margin-top: 24px;
+        }
+
+        .btn-ver-mais {
+            background: var(--blue-dark);
+            color: var(--white);
+            border: none;
+            padding: 13px 34px;
+            border-radius: 50px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+            font-family: 'Open Sans', sans-serif;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-ver-mais:hover {
+            background: var(--orange);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-lg);
+        }
+
         .btn-mais-fotos {
             display: block;
-            margin: 28px auto 0;
-            background: var(--orange);
-            color: var(--white);
+            margin: 20px auto 0;
+            background: transparent;
+            color: var(--blue-dark);
+            border: 2px solid var(--blue-dark);
             text-decoration: none;
-            padding: 13px 30px;
+            padding: 11px 26px;
             border-radius: 50px;
             font-weight: 700;
-            font-size: 15px;
+            font-size: 14px;
             text-align: center;
             transition: var(--transition);
             width: fit-content;
         }
 
         .btn-mais-fotos:hover {
-            background: var(--orange-hover);
+            background: var(--blue-dark);
+            color: var(--white);
         }
 
         /* ========== RESPONSIVO OTIMIZADO PARA CELULAR ========== */
@@ -1410,9 +1440,11 @@
 
             </div><!-- fim galeria-grid -->
 
-            <a href="https://www.facebook.com/leudes.leu.5" target="_blank" class="btn-mais-fotos">
-                📸 Ver mais fotos no Facebook
-            </a>
+            <div class="galeria-controls" id="galeriaControls">
+                <button id="btnVerMais" class="btn-ver-mais" onclick="toggleVerMais()">
+                    <span>Ver mais fotos</span> ⬇️
+                </button>
+            </div>
         </div>
     </section>
 
@@ -1531,21 +1563,76 @@
             });
         }
 
-        // ===== FILTRO DA GALERIA =====
+        // ===== GALERIA COM FILTRO E LIMITE DE 12 FOTOS =====
+        const PREVIEW_LIMIT = 12;
+        let categoriaAtual = 'todos';
+        let expandedMode = false;
+
+        function atualizarGaleria() {
+            const allItems = Array.from(document.querySelectorAll('.galeria-item'));
+            const matchingItems = allItems.filter(item => {
+                const cat = item.getAttribute('data-cat');
+                return categoriaAtual === 'todos' || cat === categoriaAtual;
+            });
+
+            // Oculta itens fora da categoria
+            allItems.forEach(item => {
+                if (!matchingItems.includes(item)) {
+                    item.classList.remove('visible');
+                    item.style.display = 'none';
+                }
+            });
+
+            // Aplica limite de 12 se nao estiver expandido
+            matchingItems.forEach((item, index) => {
+                if (expandedMode || index < PREVIEW_LIMIT) {
+                    item.classList.add('visible');
+                    item.style.display = 'block';
+                } else {
+                    item.classList.remove('visible');
+                    item.style.display = 'none';
+                }
+            });
+
+            // Gerencia botao Ver Mais / Ver Menos
+            const controls = document.getElementById('galeriaControls');
+            const btn = document.getElementById('btnVerMais');
+
+            if (matchingItems.length <= PREVIEW_LIMIT) {
+                if (controls) controls.style.display = 'none';
+            } else {
+                if (controls) controls.style.display = 'block';
+                if (btn) {
+                    if (expandedMode) {
+                        btn.innerHTML = '<span>Ver menos fotos</span> ⬆️';
+                    } else {
+                        const restantes = matchingItems.length - PREVIEW_LIMIT;
+                        btn.innerHTML = `<span>Ver mais fotos (${restantes} mais)</span> ⬇️`;
+                    }
+                }
+            }
+        }
+
+        function toggleVerMais() {
+            expandedMode = !expandedMode;
+            atualizarGaleria();
+
+            if (!expandedMode) {
+                const galeriaSection = document.getElementById('galeria');
+                if (galeriaSection) {
+                    galeriaSection.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        }
+
         function filtrarGaleria(categoria, btn) {
-            // Atualiza aba ativa
+            categoriaAtual = categoria;
+            expandedMode = false;
+
             document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
             if (btn) btn.classList.add('active');
 
-            // Exibe / oculta itens
-            const items = document.querySelectorAll('.galeria-item');
-            items.forEach(item => {
-                if (categoria === 'todos' || item.getAttribute('data-cat') === categoria) {
-                    item.classList.add('visible');
-                } else {
-                    item.classList.remove('visible');
-                }
-            });
+            atualizarGaleria();
         }
 
         // ===== LIGHTBOX COM NAVEGAÇÃO E LEGENDA =====
@@ -1600,6 +1687,13 @@
                 if (e.key === 'ArrowRight') navFoto(1);
             }
         });
+
+        // Inicialização
+        document.addEventListener('DOMContentLoaded', () => {
+            atualizarGaleria();
+        });
+        // Executa imediatamente para garantir inicializacao
+        atualizarGaleria();
     </script>
 </body>
 </html>
